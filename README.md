@@ -3,16 +3,22 @@
 ## 1. Gemfileをローカルで用意
 ```
 $ bundle init
-$ vim Gemfile # コメントアウトされている gem rails を有効に
+
+# コメントアウトされている gem rails を有効に
+$ vim Gemfile 
 ```
 
 ## 2. コンテナをビルドしてRailsアプリケーションを作成
 ```
 docker-compose build
 
-docker-compose run --rm app bundle exec rails new . --force --database=mysql --skip-turbolinks --skip-git --skip-test
+docker-compose run --rm app bundle exec rails new . --force --database=mysql --skip-coffee --skip-turbolinks --skip-test
 
-mv --force database.yml config/database.yml # config/database.yml を差し替える
+mv --force database.yml config/database.yml
+
+docker-compose run --rm rails bin/rails db:create
+
+docker-compose run --rm rails bin/rails db:migrate
 ```
 
 ## 3. docker-composeでコンテナ群を起動
