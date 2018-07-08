@@ -11,6 +11,8 @@ $ vim Gemfile # コメントアウトされている gem rails を有効に
 docker-compose build
 
 docker-compose run --rm app bundle exec rails new . --force --database=mysql --skip-turbolinks --skip-git --skip-test
+
+mv --force database.yml config/database.yml # config/database.yml を差し替える
 ```
 
 ## 3. docker-composeでコンテナ群を起動
