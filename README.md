@@ -9,10 +9,11 @@ $ vim Gemfile
 ```
 
 ## 2. init.shを実行
-- コンテナを作成
-- Railsアプリケーション作成
-- database.ymlの差し替え
-- アプリケーション用のDB作成
+init.sh は以下の処理を順番に実行する
+1. コンテナを作成
+2. Railsアプリケーション作成
+3. database.ymlの差し替え
+4. アプリケーション用のDB作成
 ```
 ./init.sh
 ```
