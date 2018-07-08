@@ -9,7 +9,7 @@ $ bundle init
 ```
 docker-compose build
 
-docker-compose run -rm app bundle exec rails new . --skip-turbolinks --skip-git --skip-test
+docker-compose run -rm app bundle exec rails new . --database=mysql --skip-turbolinks --skip-git --skip-test
 ```
 
 ## 3. docker-composeでコンテナ群を起動
