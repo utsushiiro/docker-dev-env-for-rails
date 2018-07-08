@@ -14,4 +14,4 @@ RUN wget https://github.com/progrium/entrykit/releases/download/v${ENTRYKIT_VERS
 
 WORKDIR /app
 
-ENTRYPOINT ["prehook", "bundle install -j3 --quiet", "--"]
+ENTRYPOINT ["prehook", "bundle install -j4 --quiet", "--"]
