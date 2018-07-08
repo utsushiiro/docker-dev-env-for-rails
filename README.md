@@ -16,9 +16,9 @@ docker-compose run --rm app bundle exec rails new . --force --database=mysql --s
 
 mv --force database.yml config/database.yml
 
-docker-compose run --rm rails bin/rails db:create
+docker-compose run --rm app rails db:create
 
-docker-compose run --rm rails bin/rails db:migrate
+docker-compose run --rm app rails db:migrate
 ```
 
 ## 3. docker-composeでコンテナ群を起動
