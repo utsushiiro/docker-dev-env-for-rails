@@ -6,6 +6,10 @@ services:
       - '3000:3000'
     networks:
       - default
+    environment:
+      - DB_HOST=db
+      - DB_USERNAME=root
+      - DB_PASSWORD=password
     volumes:
       - .:/app
       - bundle:/usr/local/bundle
@@ -13,6 +17,18 @@ services:
     tty: true
     stdin_open: true
 
+  db:
+    image: mysql:5.7
+    environment:
+      - MYSQL_USERNAME=root
+      - MYSQL_ROOT_PASSWORD=password
+    ports:
+      - 3306:3306
+    volumes:
+      - database:/var/lib/mysql
+
 volumes:
   bundle:
+    driver: local
+  database:
     driver: local
