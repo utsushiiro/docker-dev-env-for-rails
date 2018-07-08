@@ -11,3 +11,8 @@ docker-compose build
 
 docker-compose run -rm app bundle exec rails new . --skip-turbolinks --skip-git --skip-test
 ```
+
+## 3. docker-composeでコンテナ群を起動
+```
+docker-compose up
+```
