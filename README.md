@@ -8,17 +8,13 @@ $ bundle init
 $ vim Gemfile 
 ```
 
-## 2. コンテナをビルドしてRailsアプリケーションを作成
+## 2. init.shを実行
+- コンテナを作成
+- Railsアプリケーション作成
+- database.ymlの差し替え
+- アプリケーション用のDB作成
 ```
-docker-compose build
-
-docker-compose run --rm app bundle exec rails new . --force --database=mysql --skip-coffee --skip-turbolinks --skip-test
-
-mv --force database.yml config/database.yml
-
-docker-compose run --rm app rails db:create
-
-docker-compose run --rm app rails db:migrate
+./init.sh
 ```
 
 ## 3. docker-composeでコンテナ群を起動
