@@ -28,6 +28,6 @@ docker-compose up
 # Railsのバージョン一覧を確認
 gem query -ra -n  "^rails$"
 
-# init.shのrails newに使用したいversionを入れる
-docker-compose run --rm app bundle exec rails new _version_ . --force --database=mysql --skip-coffee --skip-turbolinks --skip-test --skip-bundle
+# Gemfileのrailsバージョンを固定
+gem "rails", "X.X.X"
 ```
