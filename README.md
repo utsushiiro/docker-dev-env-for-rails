@@ -22,3 +22,12 @@ init.sh は以下の処理を順番に実行する
 ```
 docker-compose up
 ```
+
+## Railsのバージョン指定
+```
+# Railsのバージョン一覧を確認
+gem query -ra -n  "^rails$"
+
+# init.shのrails newに使用したいversionを入れる
+docker-compose run --rm app bundle exec rails new _version_ . --force --database=mysql --skip-coffee --skip-turbolinks --skip-test --skip-bundle
+```
