@@ -31,3 +31,6 @@ gem query -ra -n  "^rails$"
 # Gemfileのrailsバージョンを固定
 gem "rails", "X.X.X"
 ```
+
+## 参考
+- [How to cache bundle install with Docker](https://medium.com/magnetis-backstage/how-to-cache-bundle-install-with-docker-7bed453a5800)
